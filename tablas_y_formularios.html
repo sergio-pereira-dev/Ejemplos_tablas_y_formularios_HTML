@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas y Formularios</title>
+</head>
+<body>
+    <p>Tabla simple de 3 filas y 3 columnas:</p>
+    <table border="1"><!-- Borde para visualizar mejor la tabla, el número es el ancho de las líneas -->
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>28</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>34</td>
+            <td>Barcelona</td>
+        </tr>
+        <tr>
+            <td>Lucía</td>
+            <td>22</td>
+            <td>Valencia</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <p>Tabla con columnas colapsadas:</p>
+    <table border="1">
+        <tr>
+            <th colspan="2">Información Personal</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>Edad</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>28</td>
+            <td>Barcelona</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>34</td>
+            <td>Valencia</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <p>Tabla con filas colapsadas:</p>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Ana</td>
+            <td>28</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Barcelona</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>34</td>
+            <td>Valencia</td>
+        </tr>
+    </table>
+    <br>    
+    <br>
+
+    <p>Formulario de contacto:</p>
+    <form action="#" method="post"> <!-- Acción ficticia -->
+        <label for="name">Nombre</label><br>
+        <input type="text" id="name" name="name" required><br><br><!-- El atributo required hace que el campo sea obligatorio -->
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br><br><!-- El tipo email valida que el formato sea correcto -->
+        <label for="phone" type="number">Teléfono</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        <label for="fecha_de_nacimiento">Fecha de nacimiento</label><br>
+        <input type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" required><br><br>
+        <label for="sex">Sexo</label><br>
+        <select id="sex" name="sex" required>
+            <option value="masculino">Masculino</option><!-- Es conveniente que el value sea descriptivo, por que ese dato lo podemos usar después -->
+            <option value="femenino">Femenino</option>
+            <option value="indefinido">Indefinido</option>
+        </select><br><br>
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Enviar" send="Enviar formulario">
+    </form>
+</body>
+</html>
